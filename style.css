@@ -19,35 +19,7 @@ body {
     margin: 0 auto;
 }
 
-/* Background Images */
-.bg-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.3;
-    z-index: 0;
-}
-
-.bg-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5em;
-    color: rgba(255, 255, 255, 0.3);
-    border: 2px dashed rgba(255, 255, 255, 0.2);
-}
-
-/* Page Layout */
+/* Page Layout - Logic for Backgrounds */
 .page {
     min-height: 100vh;
     display: flex;
@@ -57,14 +29,33 @@ body {
     padding: 40px 20px;
     text-align: center;
     position: relative;
+    /* חובה עבור מיקום הרקע */
     overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000000;
 }
 
-.page-content {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
+.page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.page-content,
+.features-grid,
+.included-grid,
+.guidance-grid,
+h2,
+h3 {
+    position: relative;
+    z-index: 2;
 }
 
 /* Scroll Animation Classes */
@@ -420,6 +411,27 @@ body {
 
 .contact-item a:hover {
     color: #cccccc;
+}
+.hero-section{
+    background-image: url('images/1.png');
+}
+.about-section{
+    background-image: url('images/2.png');
+}
+.solution-intro{
+    background-image: url('images/3.png');
+}
+.features-section{
+    background-image: url('images/4.png');
+}
+.included-section{
+    background-image: url('images/5.png');
+}
+.guidance-section{
+    background-image: url('images/6.png');
+}
+.cta-section{
+    background-image: url('images/7.png');
 }
 
 /* Responsive */
