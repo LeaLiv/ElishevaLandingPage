@@ -102,7 +102,9 @@ h3 {
     opacity: 1;
     transform: scale(1);
 }
-
+.hero-section ,.about-section{
+    color: rgb(56, 54, 54);
+}
 /* Hero Section */
 .hero-section h1 {
     font-size: 3.5em;
@@ -121,7 +123,7 @@ h3 {
 .hero-section .highlight {
     font-weight: 700;
     font-size: 2em;
-    color: #ffffff;
+    color: black;
     display: block;
     margin: 30px 0;
 }
